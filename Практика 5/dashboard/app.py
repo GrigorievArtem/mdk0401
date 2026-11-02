@@ -3,8 +3,8 @@ import requests
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="Электронный журнал", page_icon="📚", layout="wide")
-st.title("📚 Электронный журнал")
+st.set_page_config(page_title="Электронный журнал", page_icon="", layout="wide")
+st.title(" Электронный журнал")
 st.caption("Успеваемость, оценки и посещаемость учащихся")
 api_url = st.sidebar.text_input("Адрес API", os.getenv("JOURNAL_API_URL","http://127.0.0.1:8000/api")).rstrip("/")
 def get_api(path):
