@@ -1,0 +1,4 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Вход</title>
+<body><h1>Вход в электронный журнал</h1><form method="post">{% csrf_token %}
+{{ form.as_p }}<button type="submit">Войти</button></form>
+<a href="{% url 'register' %}">Регистрация</a></body></html>

@@ -1,0 +1,10 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Электронный журнал</title>
+<body><h1>Электронный журнал учебных групп</h1>
+<p>Групп: {{ stats.groups_count }} | Студентов: {{ stats.students_count }}</p>
+<p>Оценок: {{ stats.grades_count }} | Средний балл: {{ stats.average_grade|floatformat:2 }}</p>
+<p>Пропусков: {{ stats.absences_count }}</p>
+<h2>Успеваемость групп</h2><table border="1" cellpadding="6">
+<tr><th>Группа</th><th>Студентов</th><th>Средний балл</th></tr>
+{% for row in groups %}<tr><td>{{ row.group }}</td><td>{{ row.students }}</td><td>{{ row.average }}</td></tr>
+{% empty %}<tr><td colspan="3">Данных пока нет</td></tr>{% endfor %}
+</table><p><a href="/admin/">Перейти в админ-панель</a></p></body></html>
